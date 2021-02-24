@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', 'HomeController@index');
+
 Auth::routes(['reset' => false]);
 
 Route::resource('expense', 'Admin\ExpensesController')->middleware('auth');
